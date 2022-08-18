@@ -5,6 +5,7 @@ use App\Http\Controllers\Demo\DemoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Pos\ProveedorController;
 use App\Http\Controllers\Pos\ClienteController;
+use App\Http\Controllers\Pos\UnidadController;
 
 
 Route::get('/', function () {
@@ -48,6 +49,16 @@ Route::controller(ClienteController::class)->group(function () {
     Route::get('/cliente/edit/{id}', 'clienteEdit')->name('edit.cliente');
     Route::post('/cliente/update', 'clienteUpdate')->name('cliente.update');
     Route::get('/cliente/delete/{id}', 'clienteDelete')->name('delete.cliente');
+});
+
+// unidades
+Route::controller(UnidadController::class)->group(function () {
+    Route::get('/unidad/all', 'unidadAll')->name('unidad.all');
+    Route::get('/unidad/add', 'unidadAdd')->name('unidad.add');
+    Route::post('/unidad/store', 'unidadStore')->name('unidad.store');
+    Route::get('/unidad/edit/{id}', 'unidadEdit')->name('edit.unidad');
+    Route::post('/unidad/update', 'unidadUpdate')->name('unidad.update');
+    Route::get('/unidad/delete/{id}', 'unidadDelete')->name('delete.unidad');
 });
 
 

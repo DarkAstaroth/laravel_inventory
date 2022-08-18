@@ -40,6 +40,20 @@
                      </ul>
                  </li>
 
+                 <li>
+                     <a href="#" class="has-arrow waves-effect">
+                         <i class="ri-mail-send-line"></i>
+                         <span>Productos</span>
+                     </a>
+                     <ul class="sub-menu" aria-expanded="false">
+                         <li><a href="#">Todos los Productos</a></li>
+                         <li><a href="#">Categorias</a></li>
+                         <li><a href="#">Marcas</a></li>
+                         <li><a href="{{route('unidad.all')}}">Unidades</a></li>
+
+                     </ul>
+                 </li>
+
              </ul>
          </div>
          <!-- Sidebar -->

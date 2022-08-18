@@ -28,7 +28,7 @@ class ProveedorController extends Controller
             'telefono' => $request->telefono,
             'email' => $request->email,
             'direccion' => $request->direccion,
-            'create_by' => Auth::user()->id,
+            'created_by' => Auth::user()->id,
             'created_at' => Carbon::now(),
         ]);
 

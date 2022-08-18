@@ -50,7 +50,7 @@
                                         <td> {{ $item->email }} </td>
                                         <td> {{ $item->telefono }} </td>
                                         <td> {{ $item->direccion }} </td>
-                                        >
+                                        
 
                                         <td>
                                             <a href="{{ route('edit.cliente', $item->id) }}" class="btn btn-info sm"

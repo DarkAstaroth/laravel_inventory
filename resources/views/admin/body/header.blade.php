@@ -17,7 +17,7 @@
                                     <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
+                                    <img src="{{ asset('backend/assets/images/logo-scallia.png') }}" alt="logo-light" height="45">
                                 </span>
                             </a>
                         </div>
@@ -27,12 +27,12 @@
     </button>
 
     <!-- App Search-->
-    <form class="app-search d-none d-lg-block">
+    {{-- <form class="app-search d-none d-lg-block">
         <div class="position-relative">
             <input type="text" class="form-control" placeholder="Search...">
             <span class="ri-search-line"></span>
         </div>
-    </form>
+    </form> --}}
 
     
 </div>
