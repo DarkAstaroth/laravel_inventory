@@ -47,7 +47,7 @@
                      </a>
                      <ul class="sub-menu" aria-expanded="false">
                          <li><a href="#">Todos los Productos</a></li>
-                         <li><a href="#">Categorias</a></li>
+                         <li><a href="{{route('categoria.all')}}">Categorias</a></li>
                          <li><a href="#">Marcas</a></li>
                          <li><a href="{{route('unidad.all')}}">Unidades</a></li>
 

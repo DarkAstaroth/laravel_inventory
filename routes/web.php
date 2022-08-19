@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Pos\ProveedorController;
 use App\Http\Controllers\Pos\ClienteController;
 use App\Http\Controllers\Pos\UnidadController;
+use App\Http\Controllers\Pos\CategoriaController;
 
 
 Route::get('/', function () {
@@ -60,6 +61,17 @@ Route::controller(UnidadController::class)->group(function () {
     Route::post('/unidad/update', 'unidadUpdate')->name('unidad.update');
     Route::get('/unidad/delete/{id}', 'unidadDelete')->name('delete.unidad');
 });
+
+// categorias
+Route::controller(CategoriaController::class)->group(function () {
+    Route::get('/categoria/all', 'categoriaAll')->name('categoria.all');
+    Route::get('/categoria/add', 'categoriaAdd')->name('categoria.add');
+    Route::post('/categoria/store', 'categoriaStore')->name('categoria.store');
+    Route::get('/categoria/edit/{id}', 'categoriaEdit')->name('edit.categoria');
+    Route::post('/categoria/update', 'categoriaUpdate')->name('categoria.update');
+    Route::get('/categoria/delete/{id}', 'categoriaDelete')->name('delete.categoria');
+});
+
 
 
 Route::get('/dashboard', function () {
