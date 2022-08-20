@@ -47,9 +47,9 @@
                      </a>
                      <ul class="sub-menu" aria-expanded="false">
                          <li><a href="#">Todos los Productos</a></li>
-                         <li><a href="{{route('categoria.all')}}">Categorias</a></li>
-                         <li><a href="#">Marcas</a></li>
-                         <li><a href="{{route('unidad.all')}}">Unidades</a></li>
+                         <li><a href="{{ route('categoria.all') }}">Categorias</a></li>
+                         <li><a href="{{ route('marca.all') }}">Marcas</a></li>
+                         <li><a href="{{ route('unidad.all') }}">Unidades</a></li>
 
                      </ul>
                  </li>

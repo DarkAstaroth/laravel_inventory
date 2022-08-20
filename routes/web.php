@@ -7,6 +7,7 @@ use App\Http\Controllers\Pos\ProveedorController;
 use App\Http\Controllers\Pos\ClienteController;
 use App\Http\Controllers\Pos\UnidadController;
 use App\Http\Controllers\Pos\CategoriaController;
+use App\Http\Controllers\Pos\MarcaController;
 
 
 Route::get('/', function () {
@@ -70,6 +71,17 @@ Route::controller(CategoriaController::class)->group(function () {
     Route::get('/categoria/edit/{id}', 'categoriaEdit')->name('edit.categoria');
     Route::post('/categoria/update', 'categoriaUpdate')->name('categoria.update');
     Route::get('/categoria/delete/{id}', 'categoriaDelete')->name('delete.categoria');
+});
+
+
+// marcas
+Route::controller(MarcaController::class)->group(function () {
+    Route::get('/marca/all', 'marcaAll')->name('marca.all');
+    Route::get('/marca/add', 'marcaAdd')->name('marca.add');
+    Route::post('/marca/store', 'marcaStore')->name('marca.store');
+    Route::get('/marca/edit/{id}', 'marcaEdit')->name('edit.marca');
+    Route::post('/marca/update', 'marcaUpdate')->name('marca.update');
+    Route::get('/marca/delete/{id}', 'marcaDelete')->name('delete.marca');
 });
 
 
