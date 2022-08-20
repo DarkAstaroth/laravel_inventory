@@ -8,6 +8,7 @@ use App\Http\Controllers\Pos\ClienteController;
 use App\Http\Controllers\Pos\UnidadController;
 use App\Http\Controllers\Pos\CategoriaController;
 use App\Http\Controllers\Pos\MarcaController;
+use App\Http\Controllers\Pos\ProductoController;
 
 
 Route::get('/', function () {
@@ -84,6 +85,16 @@ Route::controller(MarcaController::class)->group(function () {
     Route::get('/marca/delete/{id}', 'marcaDelete')->name('delete.marca');
 });
 
+
+// producto
+Route::controller(ProductoController::class)->group(function () {
+    Route::get('/producto/all', 'productoAll')->name('producto.all');
+    Route::get('/producto/add', 'productoAdd')->name('producto.add');
+    Route::post('/producto/store', 'productoStore')->name('producto.store');
+    Route::get('/producto/edit/{id}', 'productoEdit')->name('edit.producto');
+    Route::post('/producto/update', 'productoUpdate')->name('producto.update');
+    Route::get('/producto/delete/{id}', 'productoDelete')->name('delete.producto');
+});
 
 
 Route::get('/dashboard', function () {
