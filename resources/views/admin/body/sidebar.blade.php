@@ -54,6 +54,17 @@
                      </ul>
                  </li>
 
+                   <li>
+                     <a href="#" class="has-arrow waves-effect">
+                         <i class="ri-mail-send-line"></i>
+                         <span>Compras</span>
+                     </a>
+                     <ul class="sub-menu" aria-expanded="false">
+                         <li><a href="{{ route('compra.all') }}">Todos las compras</a></li>
+
+                     </ul>
+                 </li>
+
              </ul>
          </div>
          <!-- Sidebar -->

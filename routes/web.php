@@ -9,6 +9,7 @@ use App\Http\Controllers\Pos\UnidadController;
 use App\Http\Controllers\Pos\CategoriaController;
 use App\Http\Controllers\Pos\MarcaController;
 use App\Http\Controllers\Pos\ProductoController;
+use App\Http\Controllers\Pos\CompraController;
 
 
 Route::get('/', function () {
@@ -95,6 +96,19 @@ Route::controller(ProductoController::class)->group(function () {
     Route::post('/producto/update', 'productoUpdate')->name('producto.update');
     Route::get('/producto/delete/{id}', 'productoDelete')->name('delete.producto');
 });
+
+
+
+// compras
+Route::controller(CompraController::class)->group(function () {
+    Route::get('/compra/all', 'compraAll')->name('compra.all');
+    Route::get('/compra/add', 'compraAdd')->name('compra.add');
+    Route::post('/compra/store', 'compraStore')->name('compra.store');
+    Route::get('/compra/edit/{id}', 'compraEdit')->name('edit.compra');
+    Route::post('/compra/update', 'compraUpdate')->name('compra.update');
+    Route::get('/compra/delete/{id}', 'compraDelete')->name('delete.compra');
+});
+
 
 
 Route::get('/dashboard', function () {

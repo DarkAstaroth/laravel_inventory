@@ -108,5 +108,4 @@ class MarcaController extends Controller
             ->with($notification);
     }
 
-
 }
