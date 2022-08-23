@@ -19,4 +19,12 @@ class CompraController extends Controller
         $allData = Compra::orderBy('date','desc')->orderBy('id','desc');
         return view('backend.compra.compra_all',compact('allData'));
     }
+
+    public function compraAdd(){
+        $proveedores = Proveedor::all();
+        $categorias = Categoria::all();
+        $marcas = Marca::all();
+        
+        return view('backend.compra.compra_add',compact('proveedores','categorias','marcas'));
+    }
 }

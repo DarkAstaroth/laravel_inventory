@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <a href="{{ route('compra.add') }}" class="btn btn-dark btn-rounded">Nuevo Producto</a>
+                            <a href="{{ route('compra.add') }}" class="btn btn-dark btn-rounded">Nuevo Compra</a>
                             <hr>
 
                             {{-- <h4 class="card-title">Todos los datos de proveedores </h4> --}}

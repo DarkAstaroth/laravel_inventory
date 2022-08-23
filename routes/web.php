@@ -10,6 +10,7 @@ use App\Http\Controllers\Pos\CategoriaController;
 use App\Http\Controllers\Pos\MarcaController;
 use App\Http\Controllers\Pos\ProductoController;
 use App\Http\Controllers\Pos\CompraController;
+use App\Http\Controllers\Pos\DefaultController;
 
 
 Route::get('/', function () {
@@ -107,6 +108,11 @@ Route::controller(CompraController::class)->group(function () {
     Route::get('/compra/edit/{id}', 'compraEdit')->name('edit.compra');
     Route::post('/compra/update', 'compraUpdate')->name('compra.update');
     Route::get('/compra/delete/{id}', 'compraDelete')->name('delete.compra');
+});
+
+// default controller
+Route::controller(DefaultController::class)->group(function () {
+    Route::get('/get-categoria', 'GetCategorias')->name('get-categoria');    
 });
 
 
